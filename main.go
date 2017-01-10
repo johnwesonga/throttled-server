@@ -18,17 +18,20 @@ var (
 	listenAddr      = flag.String("port", ":3000", "listen address")
 )
 
+// Server is a http server.
 type Server struct {
 	mux      *http.ServeMux
 	listener net.Listener
 }
 
+// New creates a Server type.
 func New() *Server {
 	return &Server{
 		mux: http.NewServeMux(),
 	}
 }
 
+// HandleFunc implements ServeMux.HandleFunc method.
 func (s *Server) HandleFunc(pattern string, fn func(http.ResponseWriter, *http.Request)) {
 	s.mux.HandleFunc(pattern, fn)
 }

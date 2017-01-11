@@ -1,0 +1,11 @@
+{
+	"ImportPath": "github.com/johnwesonga/throttled-server",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v74",
+	"Deps": [
+		{
+			"ImportPath": "go4.org/net/throttle",
+			"Rev": "3b6fde061c9c94928618caa51aff24646db549df"
+		}
+	]
+}

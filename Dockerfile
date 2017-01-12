@@ -1,7 +1,7 @@
 FROM iron/go
-ADD server /
-
-ENTRYPOINT ["./server"]
+MAINTAINER John Wesonga <johnwesonga@gmail.com>
+COPY server server
+ENTRYPOINT ["/server"]
 
 
 
